@@ -16,7 +16,7 @@ public class Rucksack {
     }
 
     public Set<Character> getCommonItemTypeSet() {
-        var set = new HashSet<Character>(firstCompartment.getItemTypeSet());
+        var set = new HashSet<>(firstCompartment.getItemTypeSet());
         set.retainAll(secondCompartment.getItemTypeSet());
         return set;
     }

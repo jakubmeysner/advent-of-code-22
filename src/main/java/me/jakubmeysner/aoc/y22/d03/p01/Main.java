@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         try (
-            var reader = new BufferedReader(
-                new FileReader("./resources/d03.txt")
-            )
+                var reader = new BufferedReader(
+                        new FileReader("./resources/d03.txt")
+                )
         ) {
             var rucksackList = new ArrayList<Rucksack>();
 
@@ -25,23 +25,23 @@ public class Main {
                 for (var i = 0; i < line.length(); i++) {
                     if (i < line.length() / 2) {
                         rucksack.getFirstCompartment().getItemList().add(
-                            new Item(line.charAt(i))
+                                new Item(line.charAt(i))
                         );
                     } else {
                         rucksack.getSecondCompartment().getItemList().add(
-                            new Item(line.charAt(i))
+                                new Item(line.charAt(i))
                         );
                     }
                 }
             });
 
             var prioritySum = rucksackList
-                .stream()
-                .map(
-                    rucksack -> rucksack.getCommonItemTypeSet().stream().mapToInt(Item::getTypePriority).sum()
-                )
-                .mapToInt(Integer::intValue)
-                .sum();
+                    .stream()
+                    .map(
+                            rucksack -> rucksack.getCommonItemTypeSet().stream().mapToInt(Item::getTypePriority).sum()
+                    )
+                    .mapToInt(Integer::intValue)
+                    .sum();
 
             System.out.println(prioritySum);
         } catch (IOException e) {

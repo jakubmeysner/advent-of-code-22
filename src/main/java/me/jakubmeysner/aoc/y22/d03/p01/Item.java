@@ -29,8 +29,4 @@ public class Item {
     public char getType() {
         return type;
     }
-
-    public int getPriority() {
-        return getTypePriority(type);
-    }
 }

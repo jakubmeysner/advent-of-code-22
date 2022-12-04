@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 public class Compartment {
     private final List<Item> itemList = new ArrayList<>();
 
-    public Compartment() {}
+    public Compartment() {
+    }
 
     public List<Item> getItemList() {
         return itemList;
