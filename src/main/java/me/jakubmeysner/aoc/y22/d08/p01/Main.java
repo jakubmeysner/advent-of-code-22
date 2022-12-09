@@ -27,7 +27,6 @@ public class Main {
 
                     if (y == 0 || y == grid.size() - 1 || x == 0 || x == grid.get(y).size() - 1) {
                         visibleCount++;
-                        continue;
                     } else {
                         var sidesVisible = 4;
 
