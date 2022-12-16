@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'me.jakubmeysner.aoc.y22'
+group 'com.jakubmeysner.adventofcode.y22'
 version '1.0-SNAPSHOT'
 
 repositories {
